@@ -48,7 +48,5 @@ class EmployeeList():
 
         for emp in self.employees:
             if emp.get_emp_id() == delete_id:
-                print(emp.get_emp_id(), emp.get_name(), emp.get_telphone_number(
-                ), emp.get_address(), emp.get_email_address())
                 self.employees.remove(emp)
                 break
