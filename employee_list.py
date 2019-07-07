@@ -26,10 +26,10 @@ class EmployeeList():
         return self.employees
 
     def update_employee_list(self):
-        update_id = input('Please type id you want to update:')
+        emp_id = input('Please type id you want to update:')
 
         for emp in self.employees:
-            if emp.get_emp_id() == update_id:
+            if emp.get_emp_id() == emp_id:
                 emp.set_name(input(
                     'please type name ({}):'.format(emp.get_name())))
                 emp.telphone_number = input(
