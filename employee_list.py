@@ -16,13 +16,13 @@ class EmployeeList():
                                               emp.get_address(), emp.get_email_address()))
 
     def add_employee_list(self):
-        emp2 = employee.Employee()
-        emp2.emp_id = input('please type id:')
-        emp2.emp_name = input('please type name:')
-        emp2.telphone_number = input('please type telphone_number:')
-        emp2.address = input('please type address:')
-        emp2.email_address = input('please type email address:')
-        self.employees.append(emp2)
+        new_emp = employee.Employee()
+        new_emp.emp_id = input('please type id:')
+        new_emp.emp_name = input('please type name:')
+        new_emp.telphone_number = input('please type telphone_number:')
+        new_emp.address = input('please type address:')
+        new_emp.email_address = input('please type email address:')
+        self.employees.append(new_emp)
         return self.employees
 
     def update_employee_list(self):
