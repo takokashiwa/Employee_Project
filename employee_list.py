@@ -34,14 +34,14 @@ class EmployeeList():
             if emp.get_emp_id() != emp_id:
                 continue
 
-            emp.set_name(input(
-                'please type name ({}):'.format(emp.get_name())))
-            emp.telphone_number = input(
-                'please type telphone_number ({}):'.format(emp.get_telphone_number()))
-            emp.address = input(
-                'please type address ({}):'.format(emp.get_address()))
-            emp.email_address = input(
-                'please type email address ({}):'.format(emp.get_email_address()))
+            emp.set_name(
+                input('please type name ({}):'.format(emp.get_name())))
+            emp.set_telphone_number(
+                input('please type telphone_number ({}):'.format(emp.get_telphone_number())))
+            emp.set_address(
+                input('please type address ({}):'.format(emp.get_address())))
+            emp.set_email_address(
+                input('please type email address ({}):'.format(emp.get_email_address())))
 
             print("the Employee is successfully changed!")
             is_emp_changed = True
