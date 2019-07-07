@@ -28,20 +28,25 @@ class EmployeeList():
     def update_employee_list(self):
         emp_id = input('Please type id you want to update:')
 
+        is_emp_changed = False
+
         for emp in self.employees:
-            if emp.get_emp_id() == emp_id:
-                emp.set_name(input(
-                    'please type name ({}):'.format(emp.get_name())))
-                emp.telphone_number = input(
-                    'please type telphone_number ({}):'.format(emp.get_telphone_number()))
-                emp.address = input(
-                    'please type address ({}):'.format(emp.get_address()))
-                emp.email_address = input(
-                    'please type email address ({}):'.format(emp.get_email_address()))
-                return self.employees
-            else:
-                print("the id doesn't exist in our database.")
-                break
+            if emp.get_emp_id() != emp_id:
+                continue
+
+            emp.set_name(input(
+                'please type name ({}):'.format(emp.get_name())))
+            emp.telphone_number = input(
+                'please type telphone_number ({}):'.format(emp.get_telphone_number()))
+            emp.address = input(
+                'please type address ({}):'.format(emp.get_address()))
+            emp.email_address = input(
+                'please type email address ({}):'.format(emp.get_email_address()))
+
+            is_emp_changed = True
+
+        if is_emp_changed:
+            print("the id doesn't exist in our database.")
 
     def delete_employee_list(self):
         delete_id = input('Please type id you want to delete:')
