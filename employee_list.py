@@ -12,8 +12,8 @@ class EmployeeList():
 
     def show_employee_list(self):
         for emp in self.employees:
-            print("{}. name: {} number: {} address: {} email: {}".format(emp.get_emp_id(), emp.get_name(), emp.get_telphone_number(),
-                                                                         emp.get_address(), emp.get_email_address()))
+            print("{}: {}, {}, {}, {}".format(emp.get_emp_id(), emp.get_name(), emp.get_telphone_number(),
+                                              emp.get_address(), emp.get_email_address()))
 
     def add_employee_list(self):
         emp2 = employee.Employee()
