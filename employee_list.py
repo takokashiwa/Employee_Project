@@ -46,13 +46,22 @@ class EmployeeList():
             print("the Employee is successfully changed!")
             is_emp_changed = True
 
-        if is_emp_changed:
+        if is_emp_changed is False:
             print("the id doesn't exist in our database.")
 
     def delete_employee_list(self):
         delete_id = input('Please type id you want to delete:')
 
+        is_emp_deleted = False
+
         for emp in self.employees:
-            if emp.get_emp_id() == delete_id:
-                self.employees.remove(emp)
-                break
+            if emp.get_emp_id() != delete_id:
+                continue
+
+            self.employees.remove(emp)
+
+            print("the Employee is successfully deleted!")
+            is_emp_deleted = True
+
+        if is_emp_deleted is False:
+            print("the id doesn't exist in our database.")
