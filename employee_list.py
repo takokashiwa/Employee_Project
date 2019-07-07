@@ -30,10 +30,8 @@ class EmployeeList():
 
         for emp in self.employees:
             if emp.get_emp_id() == update_id:
-                emp.emp_id = input(
-                    'please type id ({}):'.format(emp.get_emp_id()))
-                emp.emp_name = input(
-                    'please type name ({}):'.format(emp.get_name()))
+                emp.set_name(input(
+                    'please type name ({}):'.format(emp.get_name())))
                 emp.telphone_number = input(
                     'please type telphone_number ({}):'.format(emp.get_telphone_number()))
                 emp.address = input(
