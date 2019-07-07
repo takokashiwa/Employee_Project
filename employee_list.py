@@ -43,6 +43,7 @@ class EmployeeList():
             emp.email_address = input(
                 'please type email address ({}):'.format(emp.get_email_address()))
 
+            print("the Employee is successfully changed!")
             is_emp_changed = True
 
         if is_emp_changed:
